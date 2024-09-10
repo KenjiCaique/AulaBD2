@@ -152,5 +152,55 @@ FROM Clientes
 WHERE MONTH(data_criacao_conta) = 4;
 
 -- Criar script restaurar informações de login de 1 usuário!
-update Clientes
-	set 
+UPDATE Clientes
+SET 
+    senha = 'nova_senha_segura', 
+    Telefone = '0000-0000', 
+    Email = 'novo.email@dominio.com', 
+    data_criacao_conta = '2024-09-01' 
+WHERE ClienteID = 1;
+
+select * from Clientes;
+
+
+-- Criar script selecão de Livros cadastrados?
+select * from livros
+order by Titulo asc;
+
+-- Criar script de livros emprestados por cliente?
+SELECT c.Nome NomeCliente, l.Titulo TituloLivro, ip.Quantidade Quantidade
+FROM Clientes c
+JOIN Pedidos p ON c.ClienteID = p.ClienteID
+JOIN ItensPedido ip ON p.PedidoID = ip.PedidoID
+JOIN Livros l ON ip.LivroID = l.LivroID
+WHERE c.ClienteID = 1;
+
+-- Elaborar 3 perguntas utilizando as clausulas: Distinct, Not , Top
+
+-- Distinct
+SELECT DISTINCT Autor
+FROM Livros;
+
+-- Not
+SELECT Titulo, Autor, Editora, AnoPublicacao, Preco
+FROM Livros
+WHERE Editora NOT LIKE 'Rocco';
+
+
+-- Top
+SELECT TOP 5 Titulo, Autor, AnoPublicacao
+FROM Livros
+ORDER BY AnoPublicacao DESC;
+-- O top não funciona no mysql entao usamos o Limit 
+SELECT Titulo, Autor, AnoPublicacao
+FROM Livros
+ORDER BY AnoPublicacao DESC
+LIMIT 5;
+
+
+
+
+
+
+
+
