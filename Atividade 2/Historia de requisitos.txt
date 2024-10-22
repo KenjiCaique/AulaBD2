@@ -1,0 +1,165 @@
+História de Requisitos Anxiety
+ 
+Visão Geral
+O banco de dados do aplicativo "Anxiety for Students" armazenará informações sobre usuários, registros de humor, trilhas de assistência, sessões de respiração, modo foco, relatórios de uso e eventos de emergência, permitindo a integração com o aplicativo para apoiar o bem-estar emocional dos estudantes.
+ 
+Requisitos Funcionais
+
+1. Tabela usuarios
+ 
+Descrição: Armazena dados dos estudantes.
+ 
+Atributos:
+ 
+Nome completo
+ 
+E-mail (único)
+ 
+Senha (criptografada)
+ 
+Contato de emergência (opcional)
+ 
+Data de criação da conta
+ 
+ 
+Critérios de Aceitação:
+ 
+Verificar e-mail duplicado.
+ 
+Permitir recuperação de senha.
+ 
+ 
+ 
+ 
+2. Tabela humores
+ 
+Descrição: Armazena registros diários do humor.
+ 
+Atributos:
+ 
+Data do registro
+ 
+Emoção registrada
+ 
+Descrição opcional
+ 
+ 
+Critérios de Aceitação:
+ 
+Permitir adicionar e visualizar registros.
+ 
+ 
+ 
+ 
+3. Tabela relatorios
+ 
+Descrição: Armazena relatórios de uso do aplicativo.
+ 
+Atributos:
+ 
+Período de início e fim
+ 
+Tempo de tela (em minutos)
+ 
+Humor médio
+ 
+ 
+Critérios de Aceitação:
+ 
+Exibir tempo total de uso.
+ 
+ 
+ 
+ 
+4. Tabela trilhas_assistencia
+ 
+Descrição: Armazena trilhas de assistência.
+ 
+Atributos:
+ 
+Data de início
+ 
+Status da trilha
+ 
+Tipo de trilha
+ 
+ 
+Critérios de Aceitação:
+ 
+Permitir iniciar e atualizar trilhas.
+ 
+ 
+ 
+ 
+5. Tabela assistente_respiracao
+ 
+Descrição: Guarda sessões de respiração.
+ 
+Atributos:
+ 
+Data e hora da sessão
+ 
+Duração (em minutos)
+ 
+ 
+Critérios de Aceitação:
+ 
+Registrar cada sessão.
+ 
+ 
+ 
+ 
+6. Tabela modos_foco
+ 
+Descrição: Armazena ativações do modo foco.
+ 
+Atributos:
+ 
+Data e hora do início
+ 
+Duração da sessão
+ 
+Tipo de som ambiente
+ 
+ 
+Critérios de Aceitação:
+ 
+Desativar notificações durante o uso.
+ 
+ 
+ 
+ 
+7. Tabela emergencias
+ 
+Descrição: Guarda eventos de ativação do botão de emergência.
+ 
+Atributos:
+ 
+Data e hora da ativação
+ 
+Indicação de mensagem enviada
+ 
+ 
+Critérios de Aceitação:
+ 
+Botão acessível em todas as telas.
+ 
+
+ 
+Requisitos Não Funcionais
+ 
+1. Segurança: Criptografar dados sensíveis e proteger contra acessos não autorizados.
+ 
+ 
+2. Performance: Processar dados rapidamente e otimizar consultas.
+ 
+ 
+3. Backup: Realizar backups automáticos e permitir restauração de dados.
+ 
+ 
+4. Escalabilidade: Ser capaz de suportar muitos usuários ao mesmo tempo.
+ 
+
+Conclusão
+ 
+O banco de dados suportará funcionalidades essenciais do aplicativo, ajudando os estudantes a monitorar e gerenciar sua ansiedade de forma eficaz.
