@@ -573,3 +573,13 @@ INSERT INTO emergencias (id_usuario, data_emergencia, mensagem_enviada, localiza
 (29, '2024-10-22 13:00:00', FALSE, 'Rua FFF, nº 580'),
 (30, '2024-10-20 08:30:00', FALSE, 'Rua GGG, nº 590'),
 (30, '2024-10-22 09:15:00', TRUE, 'Rua HHH, nº 600');
+
+set autocommit = 0;
+select * from emergencias;
+INSERT INTO emergencias (id_usuario, data_emergencia, mensagem_enviada, localizacao) VALUES
+(1, '2024-11-20 17:00:00', FALSE, 'Rua HH, nº 101');
+commit;
+INSERT INTO emergencias (id_usuario, data_emergencia, mensagem_enviada, localizacao) VALUES
+(1, '2024-11-20 19:00:00', FALSE, 'Rua HH, nº 101');
+DELETE FROM emergencias WHERE id_emergencia = '64';
+rollback;
